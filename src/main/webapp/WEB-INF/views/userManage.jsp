@@ -14,15 +14,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>账户管理</title>
-<script type="text/javascript" src="./plugins/jquery_2.1.3.js"></script>
-<script type="text/javascript" src="./plugins/jquery.form.js"></script>
-
-<script type="text/javascript" src="./js/queryUser.js"></script>
-<script type="text/javascript" src="./js/jurisdiction.js"></script>
-<script type="text/javascript" src="./js/roleManage.js"></script>
-<script type="text/javascript" src="./js/departmentManage.js"></script>
-
-<link rel="stylesheet" type="text/css" href="./iconfont/icon-css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="iconfont/icon-css/iconfont.css">
 <link rel="stylesheet" type="text/css" href="css/commons.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="plugins/font-awesome/css/font-awesome.min.css">
@@ -213,7 +205,13 @@
 		</div>
 	</div>
  --%>
-</body>
+<script type="text/javascript" src="./plugins/jquery_2.1.3.js"></script>
+<script type="text/javascript" src="./plugins/jquery.form.js"></script>
+
+<%-- <script type="text/javascript" src="./js/queryUser.js"></script>
+<script type="text/javascript" src="./js/jurisdiction.js"></script>
+<script type="text/javascript" src="./js/roleManage.js"></script>
+<script type="text/javascript" src="./js/departmentManage.js"></script>
 <script type="text/javascript">
 	$(function() {
 		$(".menu-content-panel").find("div").on("click", function() {
@@ -249,5 +247,6 @@
 			$(".buttom-menu").load("pageUser?pageNow=${page.totalPage}");
 		})
 	});
-</script>
+</script> --%>
+</body>
 </html>

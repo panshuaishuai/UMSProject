@@ -20,6 +20,10 @@ public interface IUserDao {
 	
 	void removeUser(int userid);
 	
+	Integer removeUserRole(int roleId);
+	
+	Integer removeUserDepartment(int departmentId);
+	
 	void batchDeleteUser(List<Integer> checkedId);
 	
 	User queryUpdateUser(int updateid);

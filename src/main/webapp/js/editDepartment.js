@@ -14,7 +14,7 @@ $(function() {
 							dataType : "json", 
 							data : $("#formId").serialize(),
 							success : function(data) {
-								$("#department").trigger("click",{
+								$(".department").trigger("click",{
 									updatId : updatId
 								});
 					 	}

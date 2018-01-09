@@ -60,6 +60,10 @@ $(function() {
 			},
 			success : function(data) {
 				$(".queryRole").trigger("click");
+				if (!data.responseData.success) {
+					alert(data.responseData.data);
+					return false;
+				}
 			}
 		});
 		}

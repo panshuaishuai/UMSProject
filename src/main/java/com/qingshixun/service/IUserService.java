@@ -21,7 +21,11 @@ public interface IUserService extends BaseDao<User>{
 	boolean saveUser(User user);
 
 	void removeUser(int userid);
-
+	
+	Boolean removeUserRole(int roleId);
+	
+	Boolean removeUserDepartment(int departmentId);
+	
 	User queryUserUpdate(int updateid);
 
 	void batchDeleteUser(List<Integer> checkedId);

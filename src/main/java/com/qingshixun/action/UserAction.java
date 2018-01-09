@@ -48,7 +48,7 @@ public class UserAction {
 	private int pageNow = 1;
 	
 	// 每页显示的信息数
-	private int pageSize = 10;
+	private int pageSize = 8;
 	
 	private List<User> listUser;
 	

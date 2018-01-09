@@ -18,15 +18,15 @@
   <link rel="stylesheet" type="text/css" href="./css/userCss/queryUser.css">
 <body>
 	<div class="top-menu">
-		<button class="button-add" value="添加用户">添加用户</button>
-		<button class="button-remove">删除用户</button>
+		<button class="button-add btn btn-bg" value="添加用户">添加用户</button>
+		<button class="button-remove btn btn-bg">删除用户</button>
 		<form id="likeForm">
 		<input type="text" name="name" placeholder="请输入姓名">
-		<button class="button-like">查询用户</button>
+		<button class="button-like btn btn-bg">查询用户</button>
 		</form>
 	</div>
 	<div id="like-panel">
-	<table>
+	<table class="table table-stripe table-hover">
 		<thead>
 			<tr>
 				<th><input type="checkbox" name="user">全选</th>
@@ -54,12 +54,12 @@
 					<td>${user.role.name}</td>
 					<td>${user.createDate }</td>
 					<td><button class="user-update" data-id="${user.id }">编辑</button>
-						<button class="user-remove" data-id="${user.id }">删除${sessionScope.user }</button></td>
+						<button class="user-remove" data-id="${user.id }">删除</button></td>
 				</tr>
 			</c:forEach>
 
 		</tbody>
-		<div class="page-parent">
+	<div class="page-parent">
 		<div class="page-content">
 			共${page.totalPage }页&nbsp;&nbsp;当前是第${page.pageNow }页
 			<c:if test="${page.hasFirst }">

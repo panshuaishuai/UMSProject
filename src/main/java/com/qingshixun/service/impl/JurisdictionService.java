@@ -6,8 +6,11 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.qingshixun.core.ResponseData;
 import com.qingshixun.dao.IJurisdictionDao;
 import com.qingshixun.service.IJurisdictionService;
+import com.qingshixun.service.IRoleService;
 import com.qingshixun.model.Jurisdiction;
 import com.qingshixun.model.Role;
 
@@ -17,6 +20,9 @@ public class JurisdictionService implements IJurisdictionService {
 
 	@Autowired
 	private IJurisdictionDao jurisdictionDao;
+	
+	@Autowired
+	private IRoleService roleService;
 
 	/**
 	 * 添加权限信息
@@ -40,10 +46,17 @@ public class JurisdictionService implements IJurisdictionService {
 	 * 通过参数jurisdictionId查询并删除对应的权限信息
 	 */
 	@Override
-	public void removeJurisdiction(int jurisdictionId) {
+	public ResponseData removeJurisdiction(int jurisdictionId) {
+		ResponseData responseData = new ResponseData();
+		if (!roleService.removeRoleJurisdiction(jurisdictionId)) {
+			responseData.setError("权限已被使用，无法删除！");
+			return responseData;
+		}
 		jurisdictionDao.removeJurisdiction(jurisdictionId);
+		responseData.setError("删除成功");
+		return responseData;
 	}
-
+	
 	/**
 	 * 通过参数updateId查询对应权限信息
 	 */

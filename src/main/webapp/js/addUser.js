@@ -89,7 +89,7 @@ $(function() {
 						dataType:"json",
 						data : $("#userform").serialize(),
 						success : function() {
-							$("#page").trigger("click");
+							$(".menu-item.active").trigger("click");
 							$("#btn-add").unbind('clock');
 						}
 					})

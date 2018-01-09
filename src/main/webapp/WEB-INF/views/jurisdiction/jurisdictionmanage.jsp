@@ -4,12 +4,12 @@
 <link rel="stylesheet" type="text/css" href="./css/jurisdictionCss/jurisdictionindex.css">
 <div class="top-menu">
 	<div class="but">
-		<button type="button" class="btn-save">添加权限</button>
-		<button type="button" class="btn-remove">删除权限</button>
+		<button type="button" class="btn-save btn btn-bg">添加权限</button>
+		<button type="button" class="btn-remove btn btn-bg">删除权限</button>
 	</div>
 </div>
 
-<table>
+<table class="table table-stripe table-hover">
 	<tr>
 		<th>序号</th>
 		<th>权限名称</th>

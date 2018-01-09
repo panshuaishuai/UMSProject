@@ -62,6 +62,9 @@ C:\Users\panshuai\.m2\repository\org\springframework\spring-aop\4.3.11.RELEASE\s
 C:\Users\panshuai\.m2\repository\org\springframework\spring-tx\4.3.11.RELEASE\spring-tx-4.3.11.RELEASE.jar
 C:\Users\panshuai\.m2\repository\org\aspectj\aspectjrt\1.8.10\aspectjrt-1.8.10.jar
 C:\Users\panshuai\.m2\repository\org\aspectj\aspectjweaver\1.8.10\aspectjweaver-1.8.10.jar
+C:\Users\panshuai\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.2\jackson-core-2.9.2.jar
+C:\Users\panshuai\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.2\jackson-databind-2.9.2.jar
+C:\Users\panshuai\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar
 F:\java\lib\resources.jar
 F:\java\lib\rt.jar
 F:\java\lib\jsse.jar

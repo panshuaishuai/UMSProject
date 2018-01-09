@@ -9,11 +9,11 @@
 <div>
 	<div class="top-menu">
 		<div class="but">
-			<button type="submit" class="but-add">添加角色</button>
-			<button type="button" class="but-remove">删除角色</button>
+			<button type="submit" class="but-add btn btn-bg">添加角色</button>
+			<button type="button" class="but-remove btn btn-bg">删除角色</button>
 		</div>
 	</div>
-	<table>
+	<table class="table table-stripe table-hover">
 		<thead>
 			<tr>
 				<th>序号</th>

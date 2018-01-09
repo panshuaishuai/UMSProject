@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
+import com.qingshixun.core.ResponseData;
 import com.qingshixun.model.Jurisdiction;
 import com.qingshixun.model.Role;
 import com.qingshixun.service.IJurisdictionService;
@@ -41,6 +42,16 @@ public class RoleAction {
 
 	private List<Integer> checkedId;
 	
+	private ResponseData responseData;
+	
+	public ResponseData getResponseData() {
+		return responseData;
+	}
+
+	public void setResponseData(ResponseData responseData) {
+		this.responseData = responseData;
+	}
+
 	public List<Integer> getCheckedId() {
 		return checkedId;
 	}
@@ -145,11 +156,10 @@ public class RoleAction {
 	/*
 	 * 通过参数roleId删除对应的角色信息
 	 */
-	@Action(value = "removeRole", results = { @Result(name = "success", type = "json") })
+	@Action(value = "removeRole", results = { @Result(name = "success", type = "json",params={"responseData","responseData"}) })
 	public String removeRole() {
-		roleService.removeRole(roleId);
+		responseData = roleService.removeRole(roleId);
 		return "success";
-
 	}
 
 	/*

@@ -30,7 +30,7 @@ $(function() {
 			dataType : "json",
 			data : $("#form").serialize(),
 			success : function(data) {
-				$("#department").trigger("click");
+				$(".department").trigger("click");
 			}
 		});
 		}

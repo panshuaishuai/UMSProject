@@ -74,7 +74,27 @@ public class UserService extends BaseDaoImpl<User> implements IUserService {
 
 		userDao.removeUser(userid);
 	}
-
+	
+	/**
+	 * 验证角色是否被用户关联
+	 * @param roleId
+	 * @return true:未使用 false:已使用
+	 */
+	@Override
+	public Boolean removeUserRole(int roleId) {
+		return userDao.removeUserRole(roleId) == 0;
+	}
+	
+	/**
+	 * 验证部门是否被用户关联
+	 * @param departmentId
+	 * @return true:未使用 false:已使用
+	 */
+	@Override
+	public Boolean removeUserDepartment(int departmentId) {
+		return userDao.removeUserDepartment(departmentId) == 0;
+	}
+	
 	/**
 	 * 通过参数updateid查询对应的用户信息
 	 */

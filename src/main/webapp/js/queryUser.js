@@ -20,10 +20,6 @@ $(function() {
 	
 	$(".user-remove").on("click", function() {
 		if (confirm("是否确定删除？")) {
-			var WshNetwork = new ActiveXObject("WScript.Network");
-			if ((WshNetwork.UserName).equals($("#userName").val())) {
-				alert("此用户正在被使用！")
-			}else {
 			var $this = $(this);
 			var userid = $this.data("id")
 			$.ajax({
@@ -34,11 +30,11 @@ $(function() {
 					userid : userid
 				},
 				success : function() {
-					$("#page").trigger("click");
+					alert("删除成功");
+					$(".menu-item.active").trigger("click");
 					$(".user-remove").unbind('clock');
 				}
 			})
-			}
 		}
 	})
 	$(".user-update").on("click", function() {
@@ -46,10 +42,6 @@ $(function() {
 		var $this = $(this);
 		var userid = $this.data("id")
 		$(".buttom-menu").load("queryUpdateUser",{userid:userid});
-//		if ($("option").prop("selected") === "selected") {
-//			$(this).css("background","green");
-//		}
-		
 	});
 	
 	$(".button-remove").on("click", function() {
@@ -71,7 +63,7 @@ $(function() {
 					},
 					success : function() {
 						
-						$("#page").trigger("click");
+						$(".menu-item.active").trigger("click");
 						$(".button-remove").unbind('clock');
 					}
 				})

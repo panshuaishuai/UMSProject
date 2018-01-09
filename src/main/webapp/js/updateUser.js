@@ -10,7 +10,7 @@ $(function() {
 			type : "post",
 			data : $("#updateUserForm").serialize(),
 			success : function() {
-				$("#page").trigger("click");
+				$(".menu-item.active").trigger("click");
 			}
 		})
 	})

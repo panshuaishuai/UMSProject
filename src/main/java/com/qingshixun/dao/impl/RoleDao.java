@@ -1,8 +1,13 @@
 package com.qingshixun.dao.impl;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
+import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +53,7 @@ public class RoleDao implements IRoleDao {
 	@Override
 	public List<Role> queryRole(Role role) {
 		Session session = sessionFactory.getCurrentSession();
-		List<Role> listRole = session.createQuery("FROM Role").list();
+		List<Role> listRole = session.createQuery("FROM Role order by id desc").list();
 		return listRole;
 	}
 
@@ -60,6 +65,22 @@ public class RoleDao implements IRoleDao {
 		Session session = sessionFactory.getCurrentSession();
 		Role role = (Role) session.get(Role.class, roleId);
 		session.delete(role);
+	}
+	
+	/*
+	 * 通过参数roleId查询对应的角色信息，并删除
+	 */
+	@Override
+	public Integer removeRoleJurisdiction(int jurisdictionId) {
+		Session session = sessionFactory.getCurrentSession();
+		SQLQuery sqlQuery = session.createSQLQuery("SELECT * FROM t_role_jurisdiction rj WHERE rj.jurisdiction_id = ?");
+		sqlQuery.setParameter(0, jurisdictionId);
+		List list = sqlQuery.list();
+		Iterator iterator = list.iterator();
+		while (iterator.hasNext()) {
+			return 1;
+		}
+		return 0;
 	}
 
 	/*

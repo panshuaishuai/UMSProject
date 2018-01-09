@@ -15,95 +15,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>账户管理</title>
 <link rel="stylesheet" type="text/css" href="iconfont/icon-css/iconfont.css">
-<link rel="stylesheet" type="text/css" href="css/commons.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="./css/userCss/queryUser.css">
+<link rel="stylesheet" type="text/css" href="./css/userManage.css">
 </head>
 
 <body>
-	<div id="topLogoPanel">
-		<div class="top-logo-panel">
-			<img src="image/logo.png">
-			<div class="menu-panel">
-				<ul>
-					<li><a href="toLogout"> <span><i
-								class="iconfont icon-tuichu-"></i></span>
-					</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div id="bottomContentPanel">
-		<div class="bottom-content-panel">
-			<div class="left-menu-panel">
-				<ul class="menu-item-list">
-					<li class="active menu-item"><a href="index.html">用户管理</a></li>
-					<li class="menu-item"><a href="javascript:;">角色管理</a></li>
-					<li class="menu-item"><a href="javascript:;">权限管理</a></li>
-					<li class="menu-item"><a href="javascript:;">部门管理</a></li>
-				</ul>
-			</div>
-			<div class="right-content-panel">
-				<div id="userManageListPanel">
-					<div class="toolbar-menu-panel">
-						<button class="btn btn-bg" onclick="location.href='add.html'">添加</button>
-						<button class="btn btn-bg">删除</button>
-						<form id="likeForm">
-							<input type="text" name="name" placeholder="请输入姓名">
-							<button class="button-like">查询用户</button>
-						</form>
-					</div>
-					<div class="real-content-panel">
-						<table class="table table-stripe table-hover">
-							<thead>
-								<tr>
-									<th><input type="checkbox" name="user">全选</th>
-									<th>姓名</th>
-									<th>性别</th>
-									<th>账号</th>
-									<th>电话</th>
-									<th>状态</th>
-									<th>部门</th>
-									<th>角色</th>
-									<th>创建时间</th>
-									<th>操作</th>
-								</tr>
-							</thead>
-							<tbody>
-								<c:forEach var="user" items="${listUser}" varStatus="status">
-									<tr class="user-remove-id" data-id="${user.id }">
-										<td><input type="checkbox" name="usercheck"
-											data-id="${user.id }">${user.id }</td>
-										<td>${user.name}</td>
-										<td>${user.sex}</td>
-										<td id="">${user.username}</td>
-										<td>${user.phone}</td>
-										<td>${user.status}</td>
-										<td>${user.department.name}</td>
-										<td>${user.role.name}</td>
-										<td>${user.createDate }</td>
-										<td>
-											<button class="btn btn-xs">
-												<i class="fa fa-pencil"></i>
-											</button>
-											<button class="btn btn-xs">
-												<i class="fa fa-trash-o"></i>
-											</button>
-										</td>
-									</tr>
-								</c:forEach>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<%-- <div id="contai">
+	<div id="contai">
 		<div class="type">
-			<h1>用户管理系统-UMS-deBug</h1>
+			 <img src="image/logo.png">
 		</div>
 		<div class="menu-panel">
 			<ul>
@@ -114,39 +34,33 @@
 		</div>
 	</div>
 	<div id="content">
-		<div class="menu-panel">
+		<div class="bottom-content">
 			<div class="menu-content-panel">
-				<div id="page">
+				<div class="menu-item active" data-url="pageUser">
 					<span> <i class="iconfont icon-zhanghuguanli"></i></span>&nbsp;&nbsp;&nbsp;账户管理
 				</div>
-				<div class="queryRole">
+				<div class="queryRole menu-item" data-url="queryRole">
 					<span> <i class="iconfont icon-jiaoseguanli"></i></span>&nbsp;&nbsp;&nbsp;角色管理
 				</div>
-				<div class="jurisdictionmanage">
+				<div class="jurisdictionmanage menu-item" data-url="queryjurisdiction">
 					<span><i class="iconfont icon-quanxian"></i></span>&nbsp;&nbsp;&nbsp;权限管理
 				</div>
-				<div id="department">
+				<div class="department menu-item" data-url="showDepartment">
 					<span><i class="iconfont icon-bumen"></i></span>&nbsp;&nbsp;&nbsp;部门管理
 				</div>
 			</div>
-			<div class="avatar-panel">
-				<div class="avatar-content-panel">
-					<div class="cont5">
-						<div></div>
-					</div>
-				</div>
-				<div class="avatar-text-panel">当前登录用户</div>
-			</div>
-		</div>
 		<div class="content-panel">
 			<div class="buttom-menu">
 				<div class="top-menu">
-					<button class="button-add" value="添加用户">添加用户</button>
-					<button class="button-remove">删除用户</button>
-					
+					<button class="button-add btn btn-bg" value="添加用户">添加用户</button>
+					<button class="button-remove btn btn-bg">删除用户</button>
+					<form id="likeForm">
+					<input type="text" name="name" placeholder="请输入姓名">
+					<button class="button-like btn btn-bg">查询用户</button>
+					</form>
 				</div>
 				<div id="like-panel">
-					<table>
+					<table class="table table-stripe table-hover">
 						<thead>
 							<tr>
 								<th><input type="checkbox" name="user">全选</th>
@@ -200,38 +114,25 @@
 						</div>
 					</table>
 				</div>
-
+			</div>
 			</div>
 		</div>
 	</div>
- --%>
+
 <script type="text/javascript" src="./plugins/jquery_2.1.3.js"></script>
 <script type="text/javascript" src="./plugins/jquery.form.js"></script>
 
-<%-- <script type="text/javascript" src="./js/queryUser.js"></script>
+<script type="text/javascript" src="./js/queryUser.js"></script>
 <script type="text/javascript" src="./js/jurisdiction.js"></script>
 <script type="text/javascript" src="./js/roleManage.js"></script>
-<script type="text/javascript" src="./js/departmentManage.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$(".menu-content-panel").find("div").on("click", function() {
-			$this = $(this);
-			$this.css("background", "#287DB6");
-			$this.siblings("div").css("background", "#34495E");
-		});
-		$(".jurisdictionmanage").on("click", function() {
-			$(".buttom-menu").load("queryjurisdiction")
-		});
-
-		$("#page").on("click", function() {
-			$(".buttom-menu").load("pageUser");
-		});
-		$("#department").on("click", function() {
-			$(".buttom-menu").load("showDepartment");
-		});
-		// 查询所有角色信息
-		$(".queryRole").on("click", function() {
-			$(".buttom-menu").load("queryRole");
+		$(".menu-content-panel").find(".menu-item").on("click", function() {
+			var $this = $(this);
+			var url = $this.data("url");
+			$(".menu-content-panel").find(".menu-item").removeClass("active");
+			$this.addClass("active");
+			loadMainContent(url);
 		});
 
 		$(".firstPage").on("click", function() {
@@ -247,6 +148,11 @@
 			$(".buttom-menu").load("pageUser?pageNow=${page.totalPage}");
 		})
 	});
-</script> --%>
+	
+	// 加载主页面内容
+	function loadMainContent(url, callbacks, params) {
+		$(".buttom-menu").load(url, params, callbacks);
+	}
+</script>
 </body>
 </html>

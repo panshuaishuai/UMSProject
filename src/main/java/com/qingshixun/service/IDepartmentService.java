@@ -2,6 +2,7 @@ package com.qingshixun.service;
 
 import java.util.List;
 
+import com.qingshixun.core.ResponseData;
 import com.qingshixun.model.Department;
 
 public interface IDepartmentService {
@@ -10,7 +11,7 @@ public interface IDepartmentService {
 	
 	void saveDepartment(Department department);
 	
-	void deleteDepartment(int departmentId);
+	ResponseData deleteDepartment(int departmentId);
 	
 	Department querUpDepartment(int updateId);
 	

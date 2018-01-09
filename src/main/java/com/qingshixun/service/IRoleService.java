@@ -2,6 +2,7 @@ package com.qingshixun.service;
 
 import java.util.List;
 
+import com.qingshixun.core.ResponseData;
 import com.qingshixun.model.Jurisdiction;
 import com.qingshixun.model.Role;
 
@@ -15,7 +16,9 @@ public interface IRoleService {
 	
 	List<Role> queryRole(Role role);
 		
-	void removeRole(int roleId);
+	ResponseData removeRole(int roleId);
+	
+	Boolean removeRoleJurisdiction(int jurisdictionId);
 	
 	Role queryUpdateRole(int updateRoleId);
 	

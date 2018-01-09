@@ -22,8 +22,8 @@
 							value="${updatDepartment.description}">${updatDepartment.description}</textarea>
 					</div>
 					<div class="forget">
-						<button type="button" class="btn-edit">提交</button>　
-						<button type="button" class="cancel">取消</button>
+						<button type="button" class="btn-edit btn btn-bg">提交</button>　
+						<button type="button" class="cancel btn btn-bg">取消</button>
 					</div>
 				</div>
 			</div>

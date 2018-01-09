@@ -27,8 +27,8 @@
 							style="resize: none;" value="${updatejurisdiction.description }">${updatejurisdiction.description }</textarea>
 					</div>
 					<div class="forget">
-						<button type="reset" class="reset">重置</button>　
-						<button type="button" class="btn-submit">提交</button>
+						<button type="reset" class="reset btn btn-bg">重置</button>　
+						<button type="button" class="btn-submit btn btn-bg">提交</button>
 					</div>
 				</div>
 			</div>

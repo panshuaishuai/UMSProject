@@ -41,8 +41,8 @@
 					</c:forEach>
 				</select>
 				<div id="user-button">
-					<button type="button" id="btn-add">提交</button>　
-					<button type="reset" id="btn">重置</button>
+					<button type="button" id="btn-add" class="btn btn-bg">提交</button>　
+					<button type="reset" id="btn" class="btn btn-bg">重置</button>
 				</div>
 			</form>
 		</div>

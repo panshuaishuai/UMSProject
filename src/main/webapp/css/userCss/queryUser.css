@@ -11,35 +11,14 @@
 	margin:0;
 	width: 500px;
 	position: relative;
-    left: 400px;
-    bottom: 43px;
+    left: 350px;
+    bottom: 35px;
 }
 
 #likeForm input {
 	padding: 5px;
 	height: 35px;
-	border-radius: 5px;
-}
-
-#likeForm .button-like {
-	width: 150px;
-    height: 35px;
-    padding: 5PX;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #287DB6;
-}
-
-.button-add, .button-remove {
-	width: 150px;
-    height: 35px;
-    padding: 5PX;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #287DB6;
-    position: relative;
-    left: 5px;
-    margin: 8px;
+	border-radius: 3px;
 }
 
 .button-remove {
@@ -51,42 +30,41 @@
 	height: 80px;
 }
 
-table th {
-	background-color: white;
-	border-bottom: 2px solid #ccc;
-	padding: 10px;
+.table {
+    width: 100%;
+    font-size: 14px;
+    border-collapse: collapse;
+    border-spacing: 0px;
 }
 
-table td {
-	text-align: center;
-	padding: 5px;
+.table.table-stripe tr:nth-child(2n - 1) td {
+    background-color: #f9f9f9;
 }
 
-table tr {
-	background-color: #D3D3D3;
+.table.table-hover tr:hover td {
+    background-color: #eeeeee;
 }
 
-table tr:nth-child(2n - 1) {
-	background-color: #eee;
+.table th,
+.table td {
+    padding: 10px;
+    text-align: left;
 }
 
-table {
-	width: 100%;
-	border-collapse: collapse;
+.table th:last-child,
+.table td:last-child {
+    text-align: right;
 }
 
-table tr:hover {
-	background-color: #C0C0C0;
-}
-#content .content-panel .buttom-menu table tr {
-	cursor: pointer;
+.table th {
+    border-bottom: 2px solid #dddddd;
 }
 
 .page-content {
 	margin: 0;
 	width: 350px;
 	position: absolute;
-	right: 10px;
+	right: 80px;
 	bottom: 90px;
 	color: #6691AE;
 }

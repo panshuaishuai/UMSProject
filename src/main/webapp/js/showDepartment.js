@@ -32,8 +32,8 @@ $(function() {
 							data : {
 								checkedId : checkedId,
 							},
-							success : function(data) {
-								$("#department").trigger("click");
+							success : function() {
+								$(".department").trigger("click");
 						  	}
 						 });  
 						});
@@ -56,7 +56,11 @@ $(function() {
 						departmentId : departmentId,
 					},
 					success : function(data) {
-						$("#department").trigger("click");
+						$(".department").trigger("click");
+						if (!data.responseData.success) {
+							alert(data.responseData.data);
+							return false;
+						}
 				  	}
 				 });  
 				}

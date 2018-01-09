@@ -2,6 +2,7 @@ package com.qingshixun.service;
 
 import java.util.List;
 
+import com.qingshixun.core.ResponseData;
 import com.qingshixun.model.Jurisdiction;
 
 public interface IJurisdictionService {
@@ -10,7 +11,7 @@ public interface IJurisdictionService {
 	
 	List<Jurisdiction> queryjurisdiction(Jurisdiction jurisdiction);
 	
-	void removeJurisdiction(int jurisdictionId);
+	ResponseData removeJurisdiction(int jurisdictionId);
 	
 	Jurisdiction queryJurisdictions(int updateId);
 	

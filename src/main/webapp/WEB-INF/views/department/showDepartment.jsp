@@ -8,12 +8,12 @@
 
             <div class="top-menu">
                 <div class="but">
-					<button type="button"  class="loadadd">添加部门</button>
-					<button type="button" class="btn-delete">删除部门</button>
+					<button type="button"  class="loadadd btn btn-bg">添加部门</button>
+					<button type="button" class="btn-delete btn btn-bg">删除部门</button>
 				</div>
             </div>
         
-		<table>
+		<table class="table table-stripe table-hover">
 			<thead>
 				<th>序号</th>
 				<th>名称</th>

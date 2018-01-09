@@ -17,13 +17,6 @@ $(function() {
 		// 取两个列表长度判断的反值
 		checkboxItems.prop("checked", !isChecked);
 	});
-
-	$(".menu-content-panel").find("div").on("click", function() {
-		$this = $(this);
-		$this.css("background", "#287DB6");
-		$this.siblings("div").css("background", "#34495E");
-	});
-
 });
 
 /* 添加权限 */
@@ -89,8 +82,12 @@ $(function() {
 			data : {
 				jurisdictionId : jurisdictionId
 			},
-			success : function() {
+			success : function(data) {
 				$(".buttom-menu").load("queryjurisdiction");
+				if (!data.responseData.success) {
+					alert(data.responseData.data);
+					return false;
+				}
 			}
 		});
 			}

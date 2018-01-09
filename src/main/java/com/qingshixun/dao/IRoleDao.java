@@ -15,6 +15,8 @@ public interface IRoleDao {
 	
 	void removeRole(int roleId);
 	
+	Integer removeRoleJurisdiction(int jurisdictionId);
+	
 	Role queryUpdateRole(int updateRoleId);
 	
 	void saveOrUpdateRole(Role role);

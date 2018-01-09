@@ -24,7 +24,7 @@ public class DepartmentDao implements IDepartmentDao {
 	@Override
 	public List<Department> queryDepartment(Department department) {
 		Session session = sessionFactory.getCurrentSession();
-		List<Department> list = session.createQuery("FROM Department").list();
+		List<Department> list = session.createQuery("FROM Department order by id desc").list();
 		return list;
 	}
 

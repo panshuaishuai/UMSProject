@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="iconfont/icon-css/iconfont.css">
   <link rel="stylesheet" type="text/css" href="./css/userCss/queryUser.css">
 <body>
-<table>
+<table class="table table-stripe table-hover">
 		<thead>
 			<tr>
 				<th><input type="checkbox" name="user">全选</th>
@@ -49,7 +49,7 @@
 			</c:forEach>
 
 		</tbody>
-		<div class="page-parent">
+		<%-- <div class="page-parent">
 		<div class="page-content">
 			共${pages.totalPage }页&nbsp;&nbsp;当前是第${pages.pageNow }页
 			<c:if test="${pages.hasFirst }">
@@ -66,10 +66,10 @@
 				<a href="javascript:;" class="lastpages"> 尾页</a>
 			</c:if>
 		</div>
-	</div>
+	</div> --%>
 	</table>
 	
-	<script type="text/javascript">
+	<%-- <script type="text/javascript">
 		$(function() {
 			$(".firstPages").on("click", function() {
 				$("#like-panel").load("queryLikeUser?pageNow=1");
@@ -84,5 +84,5 @@
 				$("#like-panel").load("queryLikeUser?pageNow=${pages.totalPage}");
 			})
 		});
-	</script>
+	</script> --%>
 </body>

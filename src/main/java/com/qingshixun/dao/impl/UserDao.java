@@ -72,7 +72,29 @@ public class UserDao implements IUserDao {
 		user = (User) session.load(User.class, userid);
 		session.delete(user);
 	}
-
+	
+	/**
+	 * 通过参数roleId查询对应用户的角色关联
+	 */
+	@Override
+	public Integer removeUserRole(int roleId) {
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("from User where role.id = ?");
+		query.setParameter(0, roleId);
+		return query.list().size();
+	}
+	
+	/**
+	 * 通过参数departmentId查询对应用户的部门关联
+	 */
+	@Override
+	public Integer removeUserDepartment(int departmentId) {
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("from User where department.id = ?");
+		query.setParameter(0, departmentId);
+		return query.list().size();
+	}
+	
 	/**
 	 * 通过id集合checkedId参数，查询权限信息，实现多项删除
 	 */
@@ -114,7 +136,7 @@ public class UserDao implements IUserDao {
 	@Override
 	public List<User> queryAllUser(int pageNow, int pageSize) {
 		Session session = sessionFactory.getCurrentSession();
-		String hql = "FROM User";
+		String hql = "FROM User order by id desc";
 		Query query = session.createQuery(hql);
 		query.setFirstResult((pageNow - 1) * pageSize);
 		query.setMaxResults(pageSize);

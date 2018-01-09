@@ -29,8 +29,8 @@
                                 </c:forEach>
 				</div>
 				<div class="forget">
-					<button type="button" class="btn-cancel">取消</button>　
-					<button type="button" class="btn-save">保存</button>
+					<button type="button" class="btn-cancel btn btn-bg">取消</button>　
+					<button type="button" class="btn-save btn btn-bg">保存</button>
 				</div>
 			</div>
 		</div>

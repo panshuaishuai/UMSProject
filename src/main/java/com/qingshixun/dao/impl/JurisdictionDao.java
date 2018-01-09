@@ -36,7 +36,7 @@ public class JurisdictionDao implements IJurisdictionDao {
 	@Override
 	public List<Jurisdiction> queryjurisdiction(Jurisdiction jurisdiction) {
 		Session session = sessionFactory.getCurrentSession();
-		List<Jurisdiction> list = session.createQuery("FROM Jurisdiction").list();
+		List<Jurisdiction> list = session.createQuery("FROM Jurisdiction order by id desc").list();
 		return list;
 	}
 

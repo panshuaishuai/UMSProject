@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.qingshixun.core.ResponseData;
 import com.qingshixun.dao.IRoleDao;
 import com.qingshixun.service.IRoleService;
+import com.qingshixun.service.IUserService;
 import com.qingshixun.model.Jurisdiction;
 import com.qingshixun.model.Role;
 
@@ -18,6 +20,9 @@ public class RoleService implements IRoleService {
 
 	@Autowired
 	private IRoleDao roleDao;
+	
+	@Autowired
+	private IUserService userService;
 
 	public IRoleDao getRoleDao() {
 		return roleDao;
@@ -76,8 +81,26 @@ public class RoleService implements IRoleService {
 	 * 通过参数roleId查询并删除对应的角色信息
 	 */
 	@Override
-	public void removeRole(int roleId) {
+	public ResponseData removeRole(int roleId) {
+		ResponseData responseData = new ResponseData();
+		if (!userService.removeUserRole(roleId)) {
+			responseData.setError("角色已被使用，无法删除！");
+			return responseData;
+		}
+		
 		roleDao.removeRole(roleId);
+		responseData.setError("删除成功");
+		return responseData;
+	}
+	
+	/**
+	 * 验证权限是否被角色关联
+	 * @param jurisdictionId
+	 * @return true:未使用 false:已使用
+	 */
+	@Override
+	public Boolean removeRoleJurisdiction(int jurisdictionId) {
+		return roleDao.removeRoleJurisdiction(jurisdictionId) == 0;
 	}
 
 	/*

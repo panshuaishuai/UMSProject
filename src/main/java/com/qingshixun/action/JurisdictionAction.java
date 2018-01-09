@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
+import com.qingshixun.core.ResponseData;
 import com.qingshixun.model.Jurisdiction;
 import com.qingshixun.service.IJurisdictionService;
 
@@ -35,6 +36,16 @@ public class JurisdictionAction {
 	private List<Integer> checkedId;
 
 	private int jurisdictionid;
+	
+	private ResponseData responseData;
+
+	public ResponseData getResponseData() {
+		return responseData;
+	}
+
+	public void setResponseData(ResponseData responseData) {
+		this.responseData = responseData;
+	}
 
 	/**
 	 * 页面跳转
@@ -84,9 +95,9 @@ public class JurisdictionAction {
 	 * 
 	 * @return
 	 */
-	@Action(value = "removejurisdiction", results = { @Result(name = "success", type = "json") })
+	@Action(value = "removejurisdiction", results = { @Result(name = "success", type = "json", params = {"responseData","responseData"}) })
 	public String removejurisdiction() {
-		jurisdictionService.removeJurisdiction(jurisdictionId);
+		responseData = jurisdictionService.removeJurisdiction(jurisdictionId);
 		return "success";
 	}
 

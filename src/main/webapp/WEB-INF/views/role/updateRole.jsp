@@ -40,8 +40,8 @@
 				</c:forEach>
 					</div>
 					<div class="forget">
-						<button type="reset" class="btn-cancel">重置</button>　
-						<button type="button" class="btn-saves">提交</button>
+						<button type="reset" class="btn-cancel btn btn-bg">重置</button>　
+						<button type="button" class="btn-saves btn btn-bg">提交</button>
 					</div>
 				</div>
 			</div>

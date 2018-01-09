@@ -26,8 +26,8 @@
 							style="resize: none;"></textarea><br><span id="messages"></span>
 					</div>
 					<div class="forget">
-						<button type="reset" class="btn-reset">重置</button>　
-						<button type="button" class="btn-confirm">确定</button>
+						<button type="reset" class="btn-reset btn btn-bg">重置</button>　
+						<button type="button" class="btn-confirm btn btn-bg">确定</button>
 					</div>
 				</div>
 			</div>

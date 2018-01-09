@@ -10,7 +10,6 @@
 }
 
 #content .parent .add-users>h2 {
-	color: #2E5B7E;
 	margin: 2px 5px;
 	font-size: 24px;
 }
@@ -34,17 +33,17 @@
 
 #content .parent .user-form .content-form .input-phone {
 	position: relative;
-	top: 100px;
+	top: 80px;
 }
 
 #content .parent .user-form .content-form .input-user {
 	position: relative;
-	top: 170px;
+	top: 110px;
 }
 
 #content .parent .user-form .content-form .input-user .role {
 	position: relative;
-	top: 70px;
+	top: 30px;
 }
 
 #content .parent .user-form .content-form #User-button {
@@ -53,20 +52,17 @@
     margin: 0 auto;
     line-height: 50px;
     position: relative;
-    top: 250px;
-}
-
-#content .parent .user-form .content-form #User-button button {
-	width: 150px;
-    height: 35px;
-    padding: 5PX;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #6abc68;
-    position: relative;
-    left: 30px;
+    top: 180px;
 }
 
 input {
+	border-radius: 3px;
 	padding: 5px;
+}
+
+select {
+	margin-top: 20px;
+	width: 255px;
+	height: 25px;
+	border-radius: 3px;
 }

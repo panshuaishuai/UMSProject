@@ -40,6 +40,9 @@
 							<input type="radio" name="user.sex" value="男">男
 					<input type="radio" name="user.sex" value="女" checked>女
 					</c:if>
+					<br>
+					<br>
+					<br>
 						状态： 
 						<c:if test="${user.status == '禁用' }">
 							<input type="radio" name="user.status" value="启用">启用
@@ -49,7 +52,9 @@
 							<input type="radio" name="user.status" value="启用" checked>启用
 						<input type="radio" name="user.status" value="禁用">禁用
 					</c:if>
-						&nbsp;&nbsp;&nbsp;部门： <select id="select"
+					<br>
+					<br>
+						部门： <select id="select"
 							name="user.department.id">
 							<c:forEach var="list" items="${listDepartment }">
 							<c:if test="${list.userDepartment == true }">
@@ -78,8 +83,8 @@
 							style="display: none;">
 					</div>
 					<div id="User-button">
-						<button type="button" class="update-user">修改</button>　
-						<button type="reset" class="abandon-update">重置</button>
+						<button type="button" class="update-user btn btn-bg">修改</button>　
+						<button type="reset" class="abandon-update btn btn-bg">重置</button>
 					</div>
 				</div>
 			</div>
@@ -87,8 +92,3 @@
 		</form>
 	</div>
 </body>
-<script type="text/javascript">
-	$(function() {
-
-	})
-</script>

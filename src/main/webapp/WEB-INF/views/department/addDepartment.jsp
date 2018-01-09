@@ -6,7 +6,7 @@
 
 <div class="top-menu">
 	<div class="but">
-		<h5>添加部门</h5>
+		<h2>添加部门</h2>
 	</div>
 </div>
 <form id="form" method="post">
@@ -25,8 +25,8 @@
 			</div>
 		</div>
 		<div class="forget">
-			<button type="button" class="btn-add">提交</button>　
-			<button type="button" class="cancel">取消</button>
+			<button type="button" class="btn-add btn btn-bg">提交</button>　
+			<button type="button" class="cancel btn btn-bg">取消</button>
 		</div>
 	</div>
 </form>
